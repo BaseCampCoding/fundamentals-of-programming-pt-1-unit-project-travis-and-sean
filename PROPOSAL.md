@@ -8,3 +8,9 @@ We are rebuilding a game that consist of mini games where the user has to pass d
 ### Core User Workflows
 - Game Selection: Since we are using multiple games, we feel as if the user should have a choice in what game they want to play first. This will also allow users to choose what order they play the games in. This allows users to choose their best or worst game first.
 - Gameplay: Once the user selects their game, the correct game should then be started. They then attempt to pass through their current level.
+
+
+
+### Students
+- Travis
+- Sean
