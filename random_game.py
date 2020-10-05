@@ -58,12 +58,8 @@ def rock_paper_scissors():
     else:
         if com == 3 and shoot == "scissors":
             result = ("tie")
-<<<<<<< HEAD
-
 wins = 0
 while wins < 1 and lives > 0:  
     result = rock_paper_scissors()
     if result == "winner":
-=======
->>>>>>> bd51cc65f782bc2c0001223d44e09fe98bd80d0d
->>>>>>> b120442e85d21139b6c1090c13c9187db13879dc
+
