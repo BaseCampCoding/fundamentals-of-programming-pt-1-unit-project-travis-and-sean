@@ -9,4 +9,8 @@ while lives > 0:
     lives -= 1
     if player_number < number:
         print("Your guess is too low")
-    elif player_number    
+    if player_number > number:
+        print("Your guess is too high")
+    if player_number == number:
+        break
+    
