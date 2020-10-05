@@ -4,3 +4,7 @@ In this project, we are going to building a guessing game with a twist.  In this
 
 ### Prior Art
 We are rebuilding a game that consist of mini games where the user has to pass different levels that are thrown at them. We are using games that are already invented for example Coin Flip, Guess number 1-10 and Rock, Paper, Scissors. We are taking all these games and when the user completes a level they will be applauded and then sent to the next level. We are taking these concepts and putting them in a single program.
+
+### Core User Workflows
+- Game Selection: Since we are using multiple games, we feel as if the user should have a choice in what game they want to play first. This will also allow users to choose what order they play the games in. This allows users to choose their best or worst game first.
+- Gameplay: Once the user selects their game, the correct game should then be started. They then attempt to pass through their current level.
