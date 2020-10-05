@@ -9,7 +9,7 @@ while lives > 0:
     lives -= 1
     if player_number < number:
         print("Your guess is too low")
-    elif player_number    
+    elif player_number
 
 
 
@@ -25,30 +25,39 @@ while lives > 0:
 def rock_paper_scissors():
     com = random.randint(1, 3)
     shoot = input("Rock, Paper, Scissors... SHOOT!: ")
+    responses = ["rock", "paper", "scissors"]
+    while shoot not in responses:
+        print("Please enter valid option.")
+        shoot = input("Rock, Paper, Scissors... SHOOT!: ")
     if com == 1 and shoot == "rock":
-        result = ("")
+        result = ("tie")
         
     elif com == 1 and shoot == "paper":
-        result = ("winner")
+        result = ("loser")
        
     elif com == 1 and shoot == "scissors":
-        result = ("loser")
+        result = ("winner")
          
     if com == 2 and shoot == "paper":
         result = ("tie")
         
     elif com == 2 and shoot == "rock":
-        result = ("loser")
+        result = ("winner")
            
     elif com == 2 and shoot == "scissors":
-        result = ("winner")
+        result = ("loser")
         
     if com == 3 and shoot == "rock":
-        result = ("winner")
+        result = ("loser")
         
     elif com == 3 and shoot == "paper":
-        result = ("loser")
+        result = ("winner")
         
     else:
         if com == 3 and shoot == "scissors":
             result = ("tie")
+
+wins = 0
+while wins < 1 and lives > 0:  
+    result = rock_paper_scissors()
+    if result == "winner":
