@@ -10,3 +10,15 @@ while lives > 0:
     if player_number < number:
         print("Your guess is too low")
     elif player_number    
+
+
+
+
+
+
+
+
+
+
+
+
