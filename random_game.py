@@ -5,4 +5,3 @@ number_of_guesses = 0
 print(player_name + " I am Guessing a number between 1 and 20:")
  
 while number_of_guesses < 5:
-    player_number = 
