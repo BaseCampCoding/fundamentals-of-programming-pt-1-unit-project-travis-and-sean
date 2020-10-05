@@ -5,17 +5,19 @@ print(player_name + ", I am guessing a number between 1 and 20: ")
 lives = 5
 
 while lives > 0:
-    player_number = input("What is your number? ")
+    player_number = int(input("What is your number? "))
     lives -= 1
     if player_number < number:
         print("Your guess is too low")
-    elif player_number
+    elif player_number > number:
+        print("Your guess is too high")
+    elif player_number == number:
+        break
 
-
-
-
-
-
+if player_number == number:
+    print("You have " + str(lives) + " left!")
+else:
+    print("You are out of lives, the number was " + str(number))
 
 
 
@@ -56,8 +58,12 @@ def rock_paper_scissors():
     else:
         if com == 3 and shoot == "scissors":
             result = ("tie")
+<<<<<<< HEAD
 
 wins = 0
 while wins < 1 and lives > 0:  
     result = rock_paper_scissors()
     if result == "winner":
+=======
+>>>>>>> bd51cc65f782bc2c0001223d44e09fe98bd80d0d
+>>>>>>> b120442e85d21139b6c1090c13c9187db13879dc
