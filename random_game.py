@@ -22,11 +22,6 @@ def random_number():
         else:
             print("You are out of lives, the number was " + str(number))
 
-
-
-
-
-
 def rock_paper_scissors():
     com = random.randint(1, 3)
     shoot = input("Rock, Paper, Scissors... SHOOT!: ")
