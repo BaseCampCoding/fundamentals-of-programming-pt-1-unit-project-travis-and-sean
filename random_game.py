@@ -62,4 +62,5 @@ wins = 0
 while wins < 1 and lives > 0:  
     result = rock_paper_scissors()
     if result == "winner":
+        print()
 
