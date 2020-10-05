@@ -15,7 +15,7 @@ while lives > 0:
         break
 
 if player_number == number:
-    print("You have " + str(lives) + " left!")
+    print(str(player_name) + " have " + str(lives) + " left!")
 else:
     print("You are out of lives, the number was " + str(number))
 
