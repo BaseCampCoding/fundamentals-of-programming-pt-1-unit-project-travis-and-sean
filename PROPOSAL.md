@@ -10,9 +10,9 @@ We are rebuilding a game that consist of mini games where the user has to pass d
 - Gameplay: Once the user selects their game, the correct game should then be started. They then attempt to pass through their current level.
 
 ### Daily Goals
- - Tuesday: We plan on starting the work off by making the games. We'll make the games aand make sure they work since its half the work.
- - Wednseday: we plan on doing user input and input validation. 
- - Thursday: We plan on adding user interaction and the code that allows users to choose their game.
+ - Tuesday: We plan on starting the work off by making the games. We'll make the base games that that requires more code like rock, paper, scissors and guess the number between 1 to 20. We also plan on doing the user input and input validation.
+ - Wednesday: We plan on letting the user choose between Rock Paper Scissors, Guess the Number, and Roll the Die.
+ - Thursday: We plan on letting the user choose repeatedly which game they want to play.
 
 ### Students
 - Travis
