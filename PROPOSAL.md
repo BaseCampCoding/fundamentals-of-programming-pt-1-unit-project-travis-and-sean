@@ -9,7 +9,10 @@ We are rebuilding a game that consist of mini games where the user has to pass d
 - Game Selection: Since we are using multiple games, we feel as if the user should have a choice in what game they want to play first. This will also allow users to choose what order they play the games in. This allows users to choose their best or worst game first.
 - Gameplay: Once the user selects their game, the correct game should then be started. They then attempt to pass through their current level.
 
-
+### Daily Goals
+ - Tuesday: We plan on starting the work off by making the games. We'll make the games aand make sure they work since its half the work.
+ - Wednseday: we plan on doing user input and input validation. 
+ - Thursday: We plan on adding user interaction and the code that allows users to choose their game.
 
 ### Students
 - Travis
