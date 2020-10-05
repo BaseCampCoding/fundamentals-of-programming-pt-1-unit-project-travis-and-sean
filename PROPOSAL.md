@@ -11,8 +11,8 @@ We are rebuilding a game that consist of mini games where the user has to pass d
 
 ### Daily Goals
  - Tuesday: We plan on starting the work off by making the games. We'll make the base games that that requires more code like rock, paper, scissors and guess the number between 1 to 20. We also plan on doing the user input and input validation.
- - Wednesday: We plan on making the user choice which game they want to play first.
- - Thursday: We plan on making the user choose repeatedly which game they want to play.
+ - Wednesday: We plan on letting the user choose between Rock Paper Scissors, Guess the Number, and Roll the Die.
+ - Thursday: We plan on letting the user choose repeatedly which game they want to play.
 
 ### Students
 - Travis
