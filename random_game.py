@@ -15,7 +15,7 @@ while lives > 0:
         break
 
 if player_number == number:
-    print("You have " + str(lives) + " left!")
+    print(str(player_name) + " have " + str(lives) + " left!")
 else:
     print("You are out of lives, the number was " + str(number))
 
@@ -54,4 +54,4 @@ def rock_paper_scissors():
     else:
         if com == 3 and shoot == "scissors":
             result = ("tie")
->>>>>>> bd51cc65f782bc2c0001223d44e09fe98bd80d0d
+
