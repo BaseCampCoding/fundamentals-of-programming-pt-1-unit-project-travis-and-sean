@@ -14,3 +14,6 @@ We are rebuilding a game that consist of mini games where the user has to pass d
 ### Students
 - Travis
 - Sean
+
+### GitHub Repository
+https://github.com/BaseCampCoding/fundamentals-of-programming-pt-1-unit-project-travis-and-sean.git
