@@ -22,3 +22,33 @@ while lives > 0:
 
 
 
+def rock_paper_scissors():
+    com = random.randint(1, 3)
+    shoot = input("Rock, Paper, Scissors... SHOOT!: ")
+    if com == 1 and shoot == "rock":
+        result = ("")
+        
+    elif com == 1 and shoot == "paper":
+        result = ("winner")
+       
+    elif com == 1 and shoot == "scissors":
+        result = ("loser")
+         
+    if com == 2 and shoot == "paper":
+        result = ("tie")
+        
+    elif com == 2 and shoot == "rock":
+        result = ("loser")
+           
+    elif com == 2 and shoot == "scissors":
+        result = ("winner")
+        
+    if com == 3 and shoot == "rock":
+        result = ("winner")
+        
+    elif com == 3 and shoot == "paper":
+        result = ("loser")
+        
+    else:
+        if com == 3 and shoot == "scissors":
+            result = ("tie")
