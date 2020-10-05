@@ -1,25 +1,26 @@
 import random
 number = random.randint(1, 20)
 player_name = input("What is your name? \n")
-print(player_name + ", I am guessing a number between 1 and 20: ")
 lives = 5
 
-while lives > 0:
-    player_number = int(input("What is your number? "))
-    lives -= 1
-    if player_number < number:
-        print("Your guess is too low")
-        print("You have " + str(lives) + " lives left!")
-    elif player_number > number:
-        print("Your guess is too high")
-        print("You have " + str(lives) + " lives left!")
-    elif player_number == number:
-        break
+def random_number():
+    print(player_name + ", I am guessing a number between 1 and 20: ")
+    while lives > 0:
+        player_number = int(input("What is your number? "))
+        lives -= 1
+        if player_number < number:
+            print("Your guess is too low")
+            print("You have " + str(lives) + " lives left!")
+        elif player_number > number:
+            print("Your guess is too high")
+            print("You have " + str(lives) + " lives left!")
+        elif player_number == number:
+            break
 
-if player_number == number:
-    print(str(player_name) + " have " + str(lives) + " left!")
-else:
-    print("You are out of lives, the number was " + str(number))
+        if player_number == number:
+            print(str(player_name) + " have " + str(lives) + " left!")
+        else:
+            print("You are out of lives, the number was " + str(number))
 
 
 
@@ -60,9 +61,11 @@ def rock_paper_scissors():
     else:
         if com == 3 and shoot == "scissors":
             result = ("tie")
-wins = 0
-while wins < 1 and lives > 0:  
+    wins = 0
+    while wins < 1 and lives > 0:  
     result = rock_paper_scissors()
     if result == "winner":
-        print()
+        print("You win!")
+    elif result == "loser":
+        print("You lose")  
 
