@@ -63,9 +63,13 @@ def rock_paper_scissors():
             result = ("tie")
     wins = 0
     while wins < 1 and lives > 0:  
-    result = rock_paper_scissors()
-    if result == "winner":
-        print("You win!")
-    elif result == "loser":
-        print("You lose")  
+        result = rock_paper_scissors()
+        if result == "winner":
+            print("You win!")
+        elif result == "loser":
+            print("You lose")
+            lives -= 1
+        elif result == "tie":
+            print("That was a tie")      
 
+rock_paper_scissors()
