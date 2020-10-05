@@ -1,1 +1,3 @@
-
+## Guessing Game
+### Description and Motivation
+In this project, we are going to building a guessing game with a twist.  In this game, We want to use guessing games, or games of chance, that are alrady well known. More specifically, We want to build a game with other guessing games inside. For example, in a standard guessing game, there is one stage or level so to speak, but in this game the user will have to pass multiple levels of different games. We don't intend to build every well-known guessing game. Our goal for the project is to create a program where users can select the game they want to play and move on with a set number of lives.
