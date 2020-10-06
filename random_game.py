@@ -8,17 +8,21 @@ def the_random_game():
         print(player_name + ", I am guessing a number between 1 and 20: ")
         while lives > 0:
             player_number = int(input("What is your number? "))
-            lives -= 1
+            
             if player_number < number:
                 print("Your guess is too low")
+                lives -= 1
                 print("You have " + str(lives) + " lives left!")
             elif player_number > number:
                 print("Your guess is too high")
+                lives -= 1
                 print("You have " + str(lives) + " lives left!")
             elif player_number == number:
                 print("CORRECT!")
                 print(str(player_name) + ", you have " + str(lives) + " left!")
                 break
+                print(str(player_name) + ", you have " + str(lives) + " lives left!")
+            
             if lives == 0:
                 print("You are out of lives, the number was " + str(number))
 
