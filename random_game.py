@@ -1,11 +1,12 @@
 import random
 
-
+games = ["rock paper scissors", "guess the number", "coin flip"]
 
 player_name = input("What is your name? \n")
 
-game_choice = input("Which game do you want to play? \nWe have Rock Paper Scissors, Guess The Number, and Coin Flip. \n")
-games = ["rock paper scissors", "guess the number", "coin flip"]
+print("We have " list(games))
+game_choice = input("Which game do you want to play? \n"
+
 game_choice = game_choice.lower()
 while game_choice not in games:
     print("Please Enter A Valid Game.")
@@ -85,7 +86,6 @@ def rpsWins():
             print(f"You have {lives} lives left.")    
         elif result == "tie":
             print("That was a tie")      
-
 
 
 if game_choice == "guess the number":
