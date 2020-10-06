@@ -1,9 +1,21 @@
 import random
-number = random.randint(1, 20)
-player_name = input("What is your name? \n")
-lives = 5
 
+
+
+player_name = input("What is your name? \n")
+
+games = ["Rock Paper Scissors, Guess The Number, Coin Flip"]
+game_choice = input("Which game do you want to play? \n")
+
+while True:
+    if game_choice not in games:
+        print("Please Enter A Valid Game.")
+        game_choice = input("Which game do you want to play? \n")
+
+lives = 5
 def random_number():
+    number = random.randint(1, 20)
+    lives = 5
     print(player_name + ", I am guessing a number between 1 and 20: ")
     while lives > 0:
         player_number = int(input("What is your number? "))
@@ -15,11 +27,10 @@ def random_number():
             print("Your guess is too high")
             print("You have " + str(lives) + " lives left!")
         elif player_number == number:
-            break
-
-        if player_number == number:
-            print(str(player_name) + " have " + str(lives) + " left!")
-        else:
+            print("CORRECT!")
+            print(str(player_name) + ", you have " + str(lives) + " left!")
+            
+        if lives == 0:
             print("You are out of lives, the number was " + str(number))
 
 def rock_paper_scissors():
@@ -67,4 +78,7 @@ def rock_paper_scissors():
         elif result == "tie":
             print("That was a tie")      
 
-rock_paper_scissors()
+if game_choice == "guess the number":
+    random_number()
+elif game_choice == "rock paper scissors":
+    rock_paper_scissors()    
