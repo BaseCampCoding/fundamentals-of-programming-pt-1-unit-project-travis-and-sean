@@ -4,18 +4,19 @@ import random
 
 player_name = input("What is your name? \n")
 
-games = ["Rock Paper Scissors, Guess The Number, Coin Flip"]
-game_choice = input("Which game do you want to play? \n")
-
-while True:
-    if game_choice not in games:
-        print("Please Enter A Valid Game.")
-        game_choice = input("Which game do you want to play? \n")
+game_choice = input("Which game do you want to play? \nWe have Rock Paper Scissors, Guess The Number, and Coin Flip. \n")
+games = ["rock paper scissors", "guess the number", "coin flip"]
+game_choice = game_choice.lower()
+while game_choice not in games:
+    print("Please Enter A Valid Game.")
+    game_choice = input("Which game do you want to play? \n")
+    if game_choice in games:
+        break
 
 lives = 5
 def random_number():
+    global lives
     number = random.randint(1, 20)
-    lives = 5
     print(player_name + ", I am guessing a number between 1 and 20: ")
     while lives > 0:
         player_number = int(input("What is your number? "))
@@ -34,6 +35,7 @@ def random_number():
             print("You are out of lives, the number was " + str(number))
 
 def rock_paper_scissors():
+    global lives
     com = random.randint(1, 3)
     shoot = input("Rock, Paper, Scissors... SHOOT!: ")
     responses = ["rock", "paper", "scissors"]
@@ -67,18 +69,26 @@ def rock_paper_scissors():
     else:
         if com == 3 and shoot == "scissors":
             result = ("tie")
+    return result
+
+def rpsWins():
+    global lives
     wins = 0
     while wins < 1 and lives > 0:  
         result = rock_paper_scissors()
         if result == "winner":
             print("You win!")
+            wins += 1
         elif result == "loser":
             print("You lose")
             lives -= 1
+            print(f"You have {lives} lives left.")    
         elif result == "tie":
             print("That was a tie")      
+
+
 
 if game_choice == "guess the number":
     random_number()
 elif game_choice == "rock paper scissors":
-    rock_paper_scissors()    
+    rpsWins()
