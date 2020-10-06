@@ -18,7 +18,7 @@ def the_random_game():
             elif player_number == number:
                 print("CORRECT!")
                 print(str(player_name) + ", you have " + str(lives) + " left!")
-                
+                break
             if lives == 0:
                 print("You are out of lives, the number was " + str(number))
 
@@ -120,16 +120,3 @@ def the_random_game():
             elif game_choice == "coin flip":
                 coinFlip()
 the_random_game()
-while lives == 0:
-    yesORno = ["yes", "no", "y", "n"]
-    play_again = input("Do you want to play again? [Y/N]")
-    play_again = play_again.lower()
-    while play_again not in yesORno:
-        print("Please choose a valid option.")
-        play_again = input("Do you want to play again? [Y/N]")
-        play_again = play_again.lower()
-    if play_again == yes or play_again == y:
-        the_random_game()
-    elif play_again == no or play_again == n:
-        print("Goodbye")
-        quit()
