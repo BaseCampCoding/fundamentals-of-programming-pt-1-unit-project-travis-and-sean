@@ -11,7 +11,7 @@ def the_random_game():
             if player_number.isdigit():
                 player_number = int(player_number)
                 break 
-        while lives > 0:          
+        while lives > 0:      
             if player_number < number:
                 print("Your guess is too low")
                 lives -= 1
@@ -31,10 +31,6 @@ def the_random_game():
             while True:
                 player_number = input("What is your number? ")
                 if player_number.isdigit():
-<<<<<<< HEAD
-                    player_number = int(player_number)
-                    break
-=======
                     player_number = int(player_number)     
                     if player_number < number:
                         print("Your guess is too low")
@@ -50,7 +46,6 @@ def the_random_game():
                         break  
                     if lives == 0:
                         print("You are out of lives, the number was " + str(number))           
->>>>>>> b8284bef4f6b9ed04ce767686137ca5792ce7528
                 else:
                     print("Enter a number between 1-20")
 
