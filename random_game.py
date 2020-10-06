@@ -10,30 +10,21 @@ def the_random_game():
             while True:
                 player_number = input("What is your number? ")
                 if player_number.isdigit():
-                    player_number = int(player_number)
-                    while player_number < 0 or player_number > 20:
-                        print("Please enter a number between 1-20")
-                        player_number = input("What is your number? ")     
-                        if player_number < number:
-                            print("Your guess is too low")
-                            lives -= 1
-                            print("You have " + str(lives) + " lives left!")  
-                        elif player_number > number:
-                            print("Your guess is too high")
-                            lives -= 1
-                            print("You have " + str(lives) + " lives left!")
-                        elif player_number == number:
-                            print("CORRECT!")
-                            print(str(player_name) + ", you have " + str(lives) + " lives left!")
-                            break  
-                        if lives == 0:
-                            print("You are out of lives, the number was " + str(number))           
-                        else:
-                            print("Please enter a number 1-20")
-                            while True:
-                                player_number = input("What is your number? ")
-                                if player_number.isdigit():
-                                    player_number = int(player_number)
+                    player_number = int(player_number)     
+                    if player_number < number:
+                        print("Your guess is too low")
+                        lives -= 1
+                        print("You have " + str(lives) + " lives left!")  
+                    elif player_number > number:
+                        print("Your guess is too high")
+                        lives -= 1
+                        print("You have " + str(lives) + " lives left!")
+                    elif player_number == number:
+                        print("CORRECT!")
+                        print(str(player_name) + ", you have " + str(lives) + " lives left!")
+                        break  
+                    if lives == 0:
+                        print("You are out of lives, the number was " + str(number))           
                 else:
                     print("Please enter a number 1-20")
                     while True:
@@ -126,7 +117,7 @@ def the_random_game():
     while games != [] and lives > 0:
         for game in games:
             print(game)
-        game_choice = input("Which game do you want to play? \n")
+        game_choice = input("Which game do you want to play? (Press q to quit)\n")
         game_choice = game_choice.lower()
         if game_choice == "quit" or game_choice == "q":
             print("Goodbye")
