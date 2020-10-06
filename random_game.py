@@ -7,24 +7,32 @@ def the_random_game():
         number = random.randint(1, 20)
         print(player_name + ", I am guessing a number between 1 and 20: ")
         while lives > 0:
-            player_number = int(input("What is your number? "))
-            
-            if player_number < number:
-                print("Your guess is too low")
-                lives -= 1
-                print("You have " + str(lives) + " lives left!")
-            elif player_number > number:
-                print("Your guess is too high")
-                lives -= 1
-                print("You have " + str(lives) + " lives left!")
-            elif player_number == number:
-                print("CORRECT!")
-                print(str(player_name) + ", you have " + str(lives) + " left!")
-                break
-                print(str(player_name) + ", you have " + str(lives) + " lives left!")
-            
-            if lives == 0:
-                print("You are out of lives, the number was " + str(number))
+            while True:
+                player_number = input("What is your number? ")
+                if player_number.isdigit():
+                    player_number = int(player_number)
+                    if player_number < number:
+                        print("Your guess is too low")
+                        lives -= 1
+                        print("You have " + str(lives) + " lives left!")
+                    elif player_number > number:
+                        print("Your guess is too high")
+                        lives -= 1
+                        print("You have " + str(lives) + " lives left!")
+                    elif player_number == number:
+                        print("CORRECT!")
+                        print(str(player_name) + ", you have " + str(lives) + " lives left!")
+                        break
+                
+                    if lives == 0:
+                        print("You are out of lives, the number was " + str(number))
+                elif         
+                else:
+                    print("Please enter a number 1-20 ")
+                    while True:
+                        player_number = input("What is your number? ")
+                        if player_number.isdigit():
+                            player_number = int(player_number)
 
     def rock_paper_scissors():
         global lives
