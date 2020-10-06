@@ -11,24 +11,31 @@ def the_random_game():
                 player_number = input("What is your number? ")
                 if player_number.isdigit():
                     player_number = int(player_number)
-                    if player_number < number:
-                        print("Your guess is too low")
-                        lives -= 1
-                        print("You have " + str(lives) + " lives left!")
-                    elif player_number > number:
-                        print("Your guess is too high")
-                        lives -= 1
-                        print("You have " + str(lives) + " lives left!")
-                    elif player_number == number:
-                        print("CORRECT!")
-                        print(str(player_name) + ", you have " + str(lives) + " lives left!")
-                        break
-                
-                    if lives == 0:
-                        print("You are out of lives, the number was " + str(number))
-                elif         
+                    while player_number < 0 or player_number > 20:
+                        print("Please enter a number between 1-20")
+                        player_number = input("What is your number? ")     
+                        if player_number < number:
+                            print("Your guess is too low")
+                            lives -= 1
+                            print("You have " + str(lives) + " lives left!")  
+                        elif player_number > number:
+                            print("Your guess is too high")
+                            lives -= 1
+                            print("You have " + str(lives) + " lives left!")
+                        elif player_number == number:
+                            print("CORRECT!")
+                            print(str(player_name) + ", you have " + str(lives) + " lives left!")
+                            break  
+                        if lives == 0:
+                            print("You are out of lives, the number was " + str(number))           
+                        else:
+                            print("Please enter a number 1-20")
+                            while True:
+                                player_number = input("What is your number? ")
+                                if player_number.isdigit():
+                                    player_number = int(player_number)
                 else:
-                    print("Please enter a number 1-20 ")
+                    print("Please enter a number 1-20")
                     while True:
                         player_number = input("What is your number? ")
                         if player_number.isdigit():
