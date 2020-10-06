@@ -102,7 +102,7 @@ def the_random_game():
             elif headsORtails == "tails" and flip == 1:
                 print("It was Heads!")
                 lives -= 1
-                print(f"You have {lives} lives left!")    
+            print(f"You have {lives} lives left!")    
                 
         
     games = ["rock paper scissors", "guess the number", "coin flip"]
@@ -113,6 +113,9 @@ def the_random_game():
             print(game)
         game_choice = input("Which game do you want to play? \n")
         game_choice = game_choice.lower()
+        if game_choice == "quit" or game_choice == "q":
+            print("Goodbye")
+            quit() 
         while game_choice not in games:
             print("Please Enter A Valid Game.")
             game_choice = input("Which game do you want to play? \n")
@@ -123,4 +126,5 @@ def the_random_game():
                 rpsWins()
             elif game_choice == "coin flip":
                 coinFlip()
+             
 the_random_game()
