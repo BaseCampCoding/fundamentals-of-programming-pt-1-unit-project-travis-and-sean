@@ -1,19 +1,5 @@
 import random
 
-games = ["rock paper scissors", "guess the number", "coin flip"]
-
-player_name = input("What is your name? \n")
-
-print("We have " list(games))
-game_choice = input("Which game do you want to play? \n"
-
-game_choice = game_choice.lower()
-while game_choice not in games:
-    print("Please Enter A Valid Game.")
-    game_choice = input("Which game do you want to play? \n")
-    if game_choice in games:
-        break
-
 lives = 5
 def random_number():
     global lives
@@ -88,7 +74,22 @@ def rpsWins():
             print("That was a tie")      
 
 
-if game_choice == "guess the number":
-    random_number()
-elif game_choice == "rock paper scissors":
-    rpsWins()
+
+
+games = ["rock paper scissors", "guess the number", "coin flip"]
+
+player_name = input("What is your name? \n")
+while games != []:
+    for game in games:
+        print(game)
+    game_choice = input("Which game do you want to play? \n")
+    game_choice = game_choice.lower()
+    while game_choice not in games:
+        print("Please Enter A Valid Game.")
+        game_choice = input("Which game do you want to play? \n")
+    if game_choice in games:
+        if game_choice == "guess the number":
+            random_number()
+        elif game_choice == "rock paper scissors":
+            rpsWins()
+   
