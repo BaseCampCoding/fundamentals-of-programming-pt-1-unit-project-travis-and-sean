@@ -73,13 +73,37 @@ def rpsWins():
         elif result == "tie":
             print("That was a tie")      
 
-
-
-
+def coinFlip():
+    global lives
+    flip = random.randint(1,2)
+    choices = ["heads", "tails"]
+    wins = 0
+    while lives > 0 and wins < 1:
+        headsORtails = input("Heads or Tails? \n")
+        headsORtails = headsORtails.lower()
+        while headsORtails not in choices:
+            print("You must choose Heads or Tails")
+            headsORtails = input("Heads or Tails? \n")
+        if headsORtails == "heads" and flip == 1:
+            print("Correct!")
+            wins += 1
+        elif headsORtails == "heads" and flip == 2:
+            print("It was Tails!")
+            lives -= 1
+            print(f"You have {lives} lives left!")
+        elif headsORtails == "tails" and flip == 2:
+            print("Correct!")
+            wins += 1
+        elif headsORtails == "tails" and flip == 1:
+            print("It was Heads!")
+            lives -= 1
+            print(f"You have {lives} lives left!")    
+              
+    
 games = ["rock paper scissors", "guess the number", "coin flip"]
 
 player_name = input("What is your name? \n")
-while games != []:
+while games != [] and lives > 0:
     for game in games:
         print(game)
     game_choice = input("Which game do you want to play? \n")
@@ -92,4 +116,6 @@ while games != []:
             random_number()
         elif game_choice == "rock paper scissors":
             rpsWins()
+        elif game_choice == "coin flip":
+            coinFlip()
    
