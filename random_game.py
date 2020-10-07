@@ -3,7 +3,8 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init()
 lives = 0
-print("Welcome to The Game of Chance!")
+text = "Welcome to The Game of Chance!"
+print(Fore.LIGHTCYAN_EX + text + Style.RESET_ALL)
 player_name = input("What is your name?\n")
 def the_random_game():
     global lives
@@ -51,7 +52,8 @@ def the_random_game():
                     else:
                         print("Please enter a number 1-20")  
             elif player_number == number:
-                print("\nCORRECT!")
+                text = "\nCORRECT!"
+                print(Fore.LIGHTGREEN_EX + text)
                 print("\n", str(player_name) + ", you have " + str(lives) + " lives left!\n")
                 break 
 
@@ -100,10 +102,11 @@ def the_random_game():
             if result == "winner":
                 text = "\nYou win!"
                 text2 = "+1 life \n"
-                print(Fore.GREEN + text)
-                print(Fore.GREEN + text2)
+                print(Fore.LIGHTGREEN_EX + text)
+                print(Fore.LIGHTGREEN_EX + text2 + Style.RESET_ALL)
                 wins += 1
                 lives += 1
+                print()
                 
             elif result == "loser":
                 print("\nYou lose")
