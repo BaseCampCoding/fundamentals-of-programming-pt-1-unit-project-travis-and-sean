@@ -54,7 +54,7 @@ def the_random_game():
                         print("Please enter a number 1-20")  
             elif player_number == number:
                 text = "\nCORRECT!"
-                print(Fore.LIGHTGREEN_EX + text)
+                print(Fore.LIGHTGREEN_EX + text + Style.RESET_ALL) 
                 print("\n", str(player_name) + ", you have " + str(lives) + " lives left!\n")
                 break 
 
@@ -102,7 +102,7 @@ def the_random_game():
             result = rock_paper_scissors()
             if result == "winner":
                 text = "\nYou win!"
-                text2 = "+1 life \n"
+                text2 = "+1 life"
                 print(Fore.LIGHTGREEN_EX + text)
                 print(Fore.LIGHTGREEN_EX + text2)
                 wins += 1
@@ -110,9 +110,11 @@ def the_random_game():
                 print()
                 
             elif result == "loser":
-                print("\nYou lose")
+                text = "\nYou lose"
                 lives -= 1
+                print(Fore.RED + text + Style.RESET_ALL)
                 print(f"\nYou have {lives} lives left.")    
+
             elif result == "tie":
                 print("\nThat was a tie")      
 
@@ -128,15 +130,17 @@ def the_random_game():
                 print("You must choose Heads or Tails")
                 headsORtails = input("Heads or Tails? \n")
             if headsORtails == "heads" and flip == 1:
-                print("\nCorrect!")
+                text = "\nCorrect!"
                 wins += 1
+                print(Fore.LIGHTGREEN_EX + text + Style.RESET_ALL)
             elif headsORtails == "heads" and flip == 2:
                 print("\nIt was Tails!")
                 lives -= 1
                 print(f"\nYou have {lives} lives left!")
             elif headsORtails == "tails" and flip == 2:
-                print("\nCorrect!")
+                text = "\nCorrect!"
                 wins += 1
+                print(Fore.LIGHTGREEN_EX + text + Style.RESET_ALL)
             elif headsORtails == "tails" and flip == 1:
                 print("\nIt was Heads!")
                 lives -= 1
