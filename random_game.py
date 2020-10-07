@@ -1,8 +1,9 @@
 import random
-lives = 5
+lives = 0
 player_name = input("What is your name? \n")
 def the_random_game():
-    
+    global lives
+    lives += 5
     def random_number():
         global lives
         number = random.randint(1, 10)
@@ -49,12 +50,6 @@ def the_random_game():
                 print("CORRECT!")
                 print(str(player_name) + ", you have " + str(lives) + " lives left! \n")
                 break 
-            
-        if lives == 0:
-            print("You are out of lives, the number was " + str(number))
-            
-                     
-            
 
     def rock_paper_scissors():
         global lives
@@ -163,12 +158,12 @@ the_random_game()
 responses = ['y', 'n', 'yes', 'no']
 while lives == 0:
     replay = input("Do you want to play again? [Y/N] \n")
-    replay = replay.lower
+    replay = replay.lower()
     while replay not in responses:
         print("Please Enter A Valid Option")
         replay = input("Do you want to play again? [Y/N] \n")
     if replay == 'y' or replay == 'yes':
-        lives += 5
+        
         the_random_game()
         break
     elif replay == 'n' or replay == 'no':
