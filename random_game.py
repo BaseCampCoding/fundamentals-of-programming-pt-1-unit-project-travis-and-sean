@@ -5,7 +5,7 @@ def the_random_game():
     
     def random_number():
         global lives
-        number = random.randint(1, 20)
+        number = random.randint(1, 10)
         print(player_name + ", I am guessing a number between 1 and 20: ")
         
         while True:
@@ -40,11 +40,12 @@ def the_random_game():
                         print("Please enter a number 1-20")  
             if player_number == number:
                 print("CORRECT!")
-                print(str(player_name) + ", you have " + str(lives) + " lives left!")
+                print(str(player_name) + ", you have " + str(lives) + " lives left! \n")
                 break 
             
         if lives == 0:
             print("You are out of lives, the number was " + str(number))
+            
                      
             
 
@@ -93,6 +94,7 @@ def the_random_game():
             if result == "winner":
                 print("You win!")
                 wins += 1
+                lives += 1
             elif result == "loser":
                 print("You lose")
                 lives -= 1
@@ -137,7 +139,7 @@ def the_random_game():
         game_choice = game_choice.lower()
         if game_choice == "quit" or game_choice == "q":
             print("Goodbye")
-            quit() 
+            quit()
         while game_choice not in games:
             print("Please Enter A Valid Game.")
             game_choice = input("Which game do you want to play? \n")
