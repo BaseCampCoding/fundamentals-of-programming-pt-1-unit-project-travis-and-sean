@@ -133,7 +133,7 @@ def the_random_game():
             print(f"\nYou have {lives} lives left!")    
                 
         
-    games = ["rock paper scissors", "guess the number", "coin flip"]
+    games = ["rock paper scissors", 1, "guess the number", 2, "coin flip", 3]
 
 
     while games != [] and lives > 0:
@@ -148,13 +148,13 @@ def the_random_game():
             print("Please Enter A Valid Game.")
             game_choice = input("Which game do you want to play? \n")
         if game_choice in games:
-            if game_choice == "guess the number":
+            if game_choice == "guess the number" or game_choice == 2:
                 random_number()
-                games.remove("guess the number")
-            elif game_choice == "rock paper scissors":
+                games.remove("guess the number[2]")
+            elif game_choice == "rock paper scissors" or game_choice == 1:
                 rpsWins()
-                games.remove("rock paper scissors")
-            elif game_choice == "coin flip":
+                games.remove("rock paper scissors[1]")
+            elif game_choice == "coin flip" or game_choice = 3:
                 coinFlip()
                 games.remove("coin flip")
 
