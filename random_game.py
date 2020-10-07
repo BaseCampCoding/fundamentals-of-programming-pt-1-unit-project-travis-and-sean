@@ -1,5 +1,6 @@
 import random
 lives = 5
+player_name = input("What is your name? \n")
 def the_random_game():
     
     def random_number():
@@ -22,9 +23,10 @@ def the_random_game():
                     elif player_number == number:
                         print("CORRECT!")
                         print(str(player_name) + ", you have " + str(lives) + " lives left!")
-                        break  
+                        break 
                     if lives == 0:
-                        print("You are out of lives, the number was " + str(number))           
+                        print("You are out of lives, the number was " + str(number))
+                        break         
                 else:
                     print("Please enter a number 1-20")
                     while True:
@@ -113,7 +115,7 @@ def the_random_game():
         
     games = ["rock paper scissors", "guess the number", "coin flip"]
 
-    player_name = input("What is your name? \n")
+    
     while games != [] and lives > 0:
         for game in games:
             print(game)
