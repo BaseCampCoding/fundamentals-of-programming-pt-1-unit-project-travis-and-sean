@@ -161,3 +161,18 @@ def the_random_game():
                 coinFlip()
 
 the_random_game()
+
+responses = ['y', 'n', 'yes', 'no']
+while lives == 0:
+    replay = input("Do you want to play again? [Y/N] \n")
+    replay = replay.lower
+    while replay not in responses:
+        print("Please Enter A Valid Option")
+        replay = input("Do you want to play again? [Y/N] \n")
+    if replay == 'y' or replay == 'yes':
+        lives += 5
+        the_random_game()
+        break
+    elif replay == 'n' or replay == 'no':
+        print("Goodbye.")
+        quit()
