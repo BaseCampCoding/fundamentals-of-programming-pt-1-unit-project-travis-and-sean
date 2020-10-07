@@ -159,13 +159,14 @@ def the_random_game():
                 games.remove("coin flip")
 
     responses = ['y', 'n', 'yes', 'no']
-    while lives == 0:
+    while lives == 0 or games == []:
         replay = input("Do you want to play again? [Y/N] \n")
         replay = replay.lower()
         while replay not in responses:
             print("Please Enter A Valid Option")
             replay = input("Do you want to play again? [Y/N] \n")
         if replay == 'y' or replay == 'yes':
+            lives = 0
             the_random_game()
             break
         elif replay == 'n' or replay == 'no':
