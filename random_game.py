@@ -6,7 +6,7 @@ def the_random_game():
     lives += 5
     def random_number():
         global lives
-        number = random.randint(1, 10)
+        number = random.randint(1, 20)
         print(player_name + ", I am guessing a number between 1 and 20: ")
         
         while True:
@@ -95,8 +95,10 @@ def the_random_game():
             result = rock_paper_scissors()
             if result == "winner":
                 print("You win!")
+                print("+1 life \n")
                 wins += 1
                 lives += 1
+                
             elif result == "loser":
                 print("You lose")
                 lives -= 1
