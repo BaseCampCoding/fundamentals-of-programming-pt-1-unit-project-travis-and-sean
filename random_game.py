@@ -19,6 +19,9 @@ def the_random_game():
             if player_number < number:
                 print("Your guess is too low")
                 lives -= 1
+                if lives == 0:
+                    print("You are out of lives, the number was " + str(number))
+                    break 
                 print("You have " + str(lives) + " lives left!")
                 while True:
                     player_number = input("What is your number? ")
@@ -26,10 +29,14 @@ def the_random_game():
                         player_number = int(player_number)  
                         break
                     else:
-                        print("Please enter a number 1-20")     
+                        print("Please enter a number 1-20")
+                
             elif player_number > number:
                 print("Your guess is too high")
                 lives -= 1
+                if lives == 0:
+                    print("You are out of lives, the number was " + str(number))
+                    break 
                 print("You have " + str(lives) + " lives left!")
                 while True:
                     player_number = input("What is your number? ")
@@ -38,7 +45,7 @@ def the_random_game():
                         break 
                     else:
                         print("Please enter a number 1-20")  
-            if player_number == number:
+            elif player_number == number:
                 print("CORRECT!")
                 print(str(player_name) + ", you have " + str(lives) + " lives left! \n")
                 break 
@@ -150,6 +157,5 @@ def the_random_game():
                 rpsWins()
             elif game_choice == "coin flip":
                 coinFlip()
-             
-the_random_game()
 
+the_random_game()
