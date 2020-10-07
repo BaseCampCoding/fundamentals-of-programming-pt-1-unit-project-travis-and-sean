@@ -138,7 +138,7 @@ def the_random_game():
     
     while games != [] and lives > 0:
         for game in games:
-            print(game)
+            print("\n ", game, " \n")
         game_choice = input("Which game do you want to play? (Press q to quit)\n")
         game_choice = game_choice.lower()
         if game_choice == "quit" or game_choice == "q":
