@@ -140,7 +140,7 @@ def the_random_game():
         
     games = ["rock paper scissors", "guess the number", "coin flip"]
 
-    
+
     while games != [] and lives > 0:
         for game in games:
             print(game)
@@ -155,12 +155,16 @@ def the_random_game():
         if game_choice in games:
             if game_choice == "guess the number":
                 random_number()
+                games.remove("guess the number")
             elif game_choice == "rock paper scissors":
                 rpsWins()
+                games.remove("rock paper scissors")
             elif game_choice == "coin flip":
                 coinFlip()
+                games.remove("coin flip")
 
 the_random_game()
+
 
 responses = ['y', 'n', 'yes', 'no']
 while lives == 0:
