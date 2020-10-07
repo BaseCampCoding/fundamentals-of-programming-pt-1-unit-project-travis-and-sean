@@ -1,5 +1,9 @@
 import random
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
 lives = 0
+print("Welcome to The Game of Chance!")
 player_name = input("What is your name?\n")
 def the_random_game():
     global lives
