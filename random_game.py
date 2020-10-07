@@ -3,16 +3,15 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init()
 lives = 0
-
-print("Welcome to the Game of Chance!")
-player_name = input("What is your name? ")
+print("Welcome to The Game of Chance!")
+player_name = input("What is your name?\n")
 def the_random_game():
     global lives
     lives += 5
     def random_number():
         global lives
         number = random.randint(1, 20)
-        print(player_name + ", I am guessing a number between 1 and 20: ")
+        print("\n", player_name + ", I am guessing a number between 1 and 20: ")
         
         while True:
             player_number = input("What is your number? ")
@@ -20,13 +19,13 @@ def the_random_game():
                 player_number = int(player_number)  
                 break
             else:
-                print("Please enter a number 1-20")  
+                print("\nPlease enter a number 1-20")  
         while lives > 0:
             if player_number < number:
-                print("Your guess is too low")
+                print("\nYour guess is too low")
                 lives -= 1
                 if lives == 0:
-                    print("You are out of lives, the number was " + str(number))
+                    print("\nYou are out of lives, the number was " + str(number))
                     break 
                 print("You have " + str(lives) + " lives left!")
                 while True:
@@ -38,10 +37,10 @@ def the_random_game():
                         print("Please enter a number 1-20")
                 
             elif player_number > number:
-                print("Your guess is too high")
+                print("\nYour guess is too high")
                 lives -= 1
                 if lives == 0:
-                    print("You are out of lives, the number was " + str(number))
+                    print("\nYou are out of lives, the number was " + str(number))
                     break 
                 print("You have " + str(lives) + " lives left!")
                 while True:
@@ -52,14 +51,14 @@ def the_random_game():
                     else:
                         print("Please enter a number 1-20")  
             elif player_number == number:
-                print("CORRECT! \n")
-                print(str(player_name) + ", you have " + str(lives) + " lives left!")
+                print("\nCORRECT!")
+                print("\n", str(player_name) + ", you have " + str(lives) + " lives left!\n")
                 break 
 
     def rock_paper_scissors():
         global lives
         com = random.randint(1, 3)
-        shoot = input("Rock, Paper, Scissors... SHOOT!: ")
+        shoot = input("\nRock, Paper, Scissors... SHOOT!: ")
         responses = ["rock", "paper", "scissors"]
         while shoot not in responses:
             print("Please enter valid option.")
@@ -99,17 +98,17 @@ def the_random_game():
         while wins < 1 and lives > 0:  
             result = rock_paper_scissors()
             if result == "winner":
-                print("You win!")
+                print("\nYou win!")
                 print("+1 life \n")
                 wins += 1
                 lives += 1
                 
             elif result == "loser":
-                print("You lose")
+                print("\nYou lose")
                 lives -= 1
-                print(f"You have {lives} lives left.")    
+                print(f"\nYou have {lives} lives left.")    
             elif result == "tie":
-                print("That was a tie")      
+                print("\nThat was a tie")      
 
     def coinFlip():
         global lives
@@ -117,25 +116,25 @@ def the_random_game():
         choices = ["heads", "tails"]
         wins = 0
         while lives > 0 and wins < 1:
-            headsORtails = input("Heads or Tails? \n")
+            headsORtails = input("\nHeads or Tails? \n")
             headsORtails = headsORtails.lower()
             while headsORtails not in choices:
                 print("You must choose Heads or Tails")
                 headsORtails = input("Heads or Tails? \n")
             if headsORtails == "heads" and flip == 1:
-                print("Correct!")
+                print("\nCorrect!")
                 wins += 1
             elif headsORtails == "heads" and flip == 2:
-                print("It was Tails!")
+                print("\nIt was Tails!")
                 lives -= 1
-                print(f"You have {lives} lives left!")
+                print(f"\nYou have {lives} lives left!")
             elif headsORtails == "tails" and flip == 2:
-                print("Correct!")
+                print("\nCorrect!")
                 wins += 1
             elif headsORtails == "tails" and flip == 1:
-                print("It was Heads!")
+                print("\nIt was Heads!")
                 lives -= 1
-            print(f"You have {lives} lives left!")    
+            print(f"\nYou have {lives} lives left!")    
                 
         
     games = ["rock paper scissors", "guess the number", "coin flip"]
@@ -143,7 +142,7 @@ def the_random_game():
 
     while games != [] and lives > 0:
         for game in games:
-            print("\n ", game, " \n")
+            print("\n", game, "\n")
         game_choice = input("Which game do you want to play? (Press q to quit)\n")
         game_choice = game_choice.lower()
         if game_choice == "quit" or game_choice == "q":
@@ -164,13 +163,14 @@ def the_random_game():
                 games.remove("coin flip")
 
     responses = ['y', 'n', 'yes', 'no']
-    while lives == 0:
-        replay = input("Do you want to play again? [Y/N] \n")
+    while lives == 0 or games == []:
+        replay = input("Do you want to play again? [Y/N]\n")
         replay = replay.lower()
         while replay not in responses:
             print("Please Enter A Valid Option")
-            replay = input("Do you want to play again? [Y/N] \n")
+            replay = input("Do you want to play again? [Y/N]\n")
         if replay == 'y' or replay == 'yes':
+            lives = 0
             the_random_game()
             break
         elif replay == 'n' or replay == 'no':
