@@ -98,8 +98,10 @@ def the_random_game():
         while wins < 1 and lives > 0:  
             result = rock_paper_scissors()
             if result == "winner":
-                print("\nYou win!")
-                print("+1 life \n")
+                text = "\nYou win!"
+                text2 = "+1 life \n"
+                print(Fore.GREEN + text)
+                print(Fore.GREEN + text2)
                 wins += 1
                 lives += 1
                 
@@ -154,10 +156,10 @@ def the_random_game():
         if game_choice in games:
             if game_choice == "guess the number" or game_choice == 2:
                 random_number()
-                games.remove("guess the number[2]")
+                games.remove("guess the number")
             elif game_choice == "rock paper scissors" or game_choice == 1:
                 rpsWins()
-                games.remove("rock paper scissors[1]")
+                games.remove("rock paper scissors")
             elif game_choice == "coin flip" or game_choice == 3:
                 coinFlip()
                 games.remove("coin flip")
