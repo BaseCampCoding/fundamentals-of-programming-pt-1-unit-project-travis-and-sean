@@ -140,7 +140,7 @@ def the_random_game():
             elif headsORtails == "tails" and flip == 1:
                 print("\nIt was Heads!")
                 lives -= 1
-            print(f"\nYou have {lives} lives left!")    
+                print(f"\nYou have {lives} lives left!")    
                 
         
     games = ["rock paper scissors", "guess the number", "coin flip"]
