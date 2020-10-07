@@ -100,8 +100,10 @@ def the_random_game():
             result = rock_paper_scissors()
             if result == "winner":
                 print("You win!")
+                print("+1 life \n")
                 wins += 1
                 lives += 1
+                
             elif result == "loser":
                 print("You lose")
                 lives -= 1
