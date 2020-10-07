@@ -5,7 +5,7 @@ def the_random_game():
     
     def random_number():
         global lives
-        number = random.randint(1, 10)
+        number = random.randint(1, 20)
         print(player_name + ", I am guessing a number between 1 and 20: ")
         
         while True:
