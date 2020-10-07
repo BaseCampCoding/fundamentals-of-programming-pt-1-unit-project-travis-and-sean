@@ -2,6 +2,7 @@ import random
 import colorama
 from colorama import Fore, Back, Style
 colorama.init()
+
 lives = 0
 text = "Welcome to The Game of Chance!"
 print(Fore.LIGHTCYAN_EX + text + Style.RESET_ALL)
@@ -103,7 +104,7 @@ def the_random_game():
                 text = "\nYou win!"
                 text2 = "+1 life \n"
                 print(Fore.LIGHTGREEN_EX + text)
-                print(Fore.LIGHTGREEN_EX + text2 + Style.RESET_ALL)
+                print(Fore.LIGHTGREEN_EX + text2)
                 wins += 1
                 lives += 1
                 print()
@@ -147,7 +148,8 @@ def the_random_game():
 
     while games != [] and lives > 0:
         for game in games:
-            print("\n", game, "\n")
+            print(Fore.LIGHTYELLOW_EX + "\n", game, "\n" + Style.RESET_ALL)
+
         game_choice = input("Which game do you want to play? (Press q to quit)\n")
         game_choice = game_choice.lower()
         if game_choice == "quit" or game_choice == "q":
