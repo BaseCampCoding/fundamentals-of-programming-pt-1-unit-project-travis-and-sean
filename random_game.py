@@ -137,8 +137,8 @@ def the_random_game():
             print(f"\nYou have {lives} lives left!")    
                 
         
-    games = ["rock paper scissors", 1, "guess the number", 2, "coin flip", 3]
-
+    games = ["rock paper scissors", "guess the number", "coin flip"]
+    
 
     while games != [] and lives > 0:
         for game in games:
@@ -158,7 +158,7 @@ def the_random_game():
             elif game_choice == "rock paper scissors" or game_choice == 1:
                 rpsWins()
                 games.remove("rock paper scissors[1]")
-            elif game_choice == "coin flip" or game_choice = 3:
+            elif game_choice == "coin flip" or game_choice == 3:
                 coinFlip()
                 games.remove("coin flip")
 
