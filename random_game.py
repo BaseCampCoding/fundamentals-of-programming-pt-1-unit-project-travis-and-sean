@@ -1,6 +1,11 @@
 import random
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
 lives = 0
-player_name = input("What is your name? \n")
+
+print("Welcome to the Game of Chance!")
+player_name = input("What is your name? ")
 def the_random_game():
     global lives
     lives += 5
@@ -47,8 +52,8 @@ def the_random_game():
                     else:
                         print("Please enter a number 1-20")  
             elif player_number == number:
-                print("CORRECT!")
-                print(str(player_name) + ", you have " + str(lives) + " lives left! \n")
+                print("CORRECT! \n")
+                print(str(player_name) + ", you have " + str(lives) + " lives left!")
                 break 
 
     def rock_paper_scissors():
