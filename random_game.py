@@ -21,7 +21,7 @@ def the_random_game():
                 player_number = int(player_number)  
                 break
             else:
-                print(Fore.RED + "\nPlease enter a number 1-20")  
+                print(Fore.LIGHTRED_EX + "\nPlease enter a number 1-20")  
         while lives > 0:
             if player_number < number:
                 print("\nYour guess is too low")
