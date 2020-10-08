@@ -13,15 +13,15 @@ def the_random_game():
     def random_number():
         global lives
         number = random.randint(1, 20)
-        print("\n", player_name + ", I am guessing a number between 1 and 20: ")
+        print('\n' + player_name + ", I am guessing a number between 1 and 20: ")
         
         while True:
             player_number = input("What is your number? ")
             if player_number.isdigit():
-                player_number = int(player_number)  
+                player_number = int(player_number)
                 break
             else:
-                print(Fore.LIGHTRED_EX + "\nPlease enter a number 1-20")  
+                print(Fore.LIGHTRED_EX + "\nPlease enter a number 1-20")
         while lives > 0:
             if player_number < number:
                 print("\nYour guess is too low")
@@ -53,9 +53,9 @@ def the_random_game():
                     else:
                         print(Fore.LIGHTRED_EX + "Please enter a number 1-20" + Style.RESET_ALL)  
             elif player_number == number:
-                text = "\nCORRECT!"
+                text = "\nCORRECT!\n"
                 print(Fore.LIGHTGREEN_EX + text + Style.RESET_ALL) 
-                print(Fore.LIGHTMAGENTA_EX + "\n", str(player_name) + ", you have " + str(lives) + " lives left!\n" + Style.RESET_ALL)
+                print(Fore.LIGHTMAGENTA_EX + str(player_name) + ", you have " + str(lives) + " lives left!\n" + Style.RESET_ALL)
                 break 
 
     def rock_paper_scissors():
@@ -155,8 +155,8 @@ def the_random_game():
 
     while games != [] and lives > 0:
         for game in games:
-            print(Fore.LIGHTYELLOW_EX + "\n", game, "\n" + Style.RESET_ALL)
-
+            print(Fore.LIGHTYELLOW_EX + "\n", game, "\n" + Style.RESET_ALL)               
+        
         game_choice = input("Which game do you want to play? (Press q to quit)\n")
         game_choice = game_choice.lower()
         if game_choice == "quit" or game_choice == "q":
@@ -164,7 +164,7 @@ def the_random_game():
             quit()
         while game_choice not in games:
             print(Fore.LIGHTRED_EX + "Please Enter A Valid Game." + Style.RESET_ALL)
-            game_choice = input("Which game do you want to play? \n")
+            game_choice = input("\nWhich game do you want to play? \n")
         if game_choice in games:
             if game_choice == "guess the number" or game_choice == 2:
                 random_number()
@@ -178,7 +178,8 @@ def the_random_game():
 
     responses = ['y', 'n', 'yes', 'no']
     while lives == 0 or games == []:
-        print(Fore.LIGHTCYAN_EX + "Congratulations!" + Style.RESET_ALL + "You have Completed The Game of Chance\n")
+        if lives > 0 and games == []:
+            print(Fore.LIGHTCYAN_EX + "Congratulations!" + Style.RESET_ALL + ", You have Completed The Game of Chance\n")
         replay = input("Do you want to play again? [Y/N]\n")
         replay = replay.lower()
         while replay not in responses:
