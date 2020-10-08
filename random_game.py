@@ -155,7 +155,7 @@ def the_random_game():
         player_horse = input("Pick a Horse number\nLucky[1], Speedy[2], Lightning[3], Slow Poke[4]: ")
         response = ["1", "2", "3", "4"]
         while player_horse not in response:
-            print("Please pick a horse number!")
+            print(Fore.LIGHTRED_EX + "Please pick a horse number!" + Style.RESET_ALL)
             player_horse = input("Lucky[1], Speedy[2], Lightning[3], Slow Poke[4]: ")
         ## Lucky
         if num == 1 and player_horse == "1":
@@ -201,11 +201,12 @@ def the_random_game():
             while result == "won":
                 wins += 1
                 print(Fore.LIGHTCYAN_EX+ "Your horse won" + Style.RESET_ALL)
+                print(str(player_name) + ", you have " + str(lives) + " lives left!")
                 print()
                 break
             while result in lost:
                 lives -= 1
-                print("Your horse lost")
+                print(Fore.LIGHTRED_EX + "Your horse lost" + Style.RESET_ALL)
                 print(Fore.LIGHTMAGENTA_EX + f"You have {lives} lives left!\n" + Style.RESET_ALL)
                 break
     
