@@ -4,8 +4,8 @@ from colorama import Fore, Style
 colorama.init()
 
 lives = 0
-text = "Welcome to The Game of Chance!"
-print(Fore.LIGHTCYAN_EX + text + Style.RESET_ALL)
+ 
+print(Fore.LIGHTCYAN_EX + "Welcome to The Game of Chance!" + Style.RESET_ALL)
 player_name = input("What is your name?\n")
 def the_random_game():
     global lives
@@ -21,41 +21,41 @@ def the_random_game():
                 player_number = int(player_number)  
                 break
             else:
-                print("\nPlease enter a number 1-20")  
+                print(Fore.RED + "\nPlease enter a number 1-20")  
         while lives > 0:
             if player_number < number:
                 print("\nYour guess is too low")
                 lives -= 1
                 if lives == 0:
-                    print("\nYou are out of lives, the number was " + str(number))
+                    print(Fore.LIGHTRED_EX + "\nYou are out of lives, the number was " + str(number) + Style.RESET_ALL)
                     break 
-                print("You have " + str(lives) + " lives left!")
+                print(Fore.LIGHTMAGENTA_EX + "You have " + str(lives) + " lives left!" + Style.RESET_ALL)
                 while True:
                     player_number = input("What is your number? ")
                     if player_number.isdigit():
                         player_number = int(player_number)  
                         break
                     else:
-                        print("Please enter a number 1-20")
+                        print(Fore.LIGHTRED_EX + "Please enter a number 1-20" + Style.RESET_ALL)
                 
             elif player_number > number:
                 print("\nYour guess is too high")
                 lives -= 1
                 if lives == 0:
-                    print("\nYou are out of lives, the number was " + str(number))
+                    print(Fore.LIGHTRED_EX + "\nYou are out of lives, the number was " + str(number) + Style.RESET_ALL)
                     break 
-                print("You have " + str(lives) + " lives left!")
+                print(Fore.LIGHTMAGENTA_EX + "You have " + str(lives) + " lives left!" + Style.RESET_ALL)
                 while True:
                     player_number = input("What is your number? ")
                     if player_number.isdigit():
                         player_number = int(player_number)  
                         break 
                     else:
-                        print("Please enter a number 1-20")  
+                        print(Fore.LIGHTRED_EX + "Please enter a number 1-20" + Style.RESET_ALL)  
             elif player_number == number:
                 text = "\nCORRECT!"
                 print(Fore.LIGHTGREEN_EX + text + Style.RESET_ALL) 
-                print("\n", str(player_name) + ", you have " + str(lives) + " lives left!\n")
+                print(Fore.LIGHTMAGENTA_EX + "\n", str(player_name) + ", you have " + str(lives) + " lives left!\n" + Style.RESET_ALL)
                 break 
 
     def rock_paper_scissors():
@@ -64,8 +64,8 @@ def the_random_game():
         shoot = input("\nRock, Paper, Scissors... SHOOT!: ")
         responses = ["rock", "paper", "scissors"]
         while shoot not in responses:
-            print("Please enter valid option.")
-            shoot = input("Rock, Paper, Scissors... SHOOT!: ")
+            print(Fore.LIGHTRED_EX + "Please enter valid option." + Style.RESET_ALL)
+            shoot = input(Fore.MAGENTA + "Rock, Paper, Scissors... SHOOT!: " + Style.RESET_ALL)
         if com == 1 and shoot == "rock":
             result = ("tie")
             
