@@ -149,7 +149,7 @@ def the_random_game():
                 print(Fore.LIGHTRED_EX + result + Style.RESET_ALL)
                 lives -= 1
                 print(Fore.LIGHTMAGENTA_EX + f"\nYou have {lives} lives left!" + Style.RESET_ALL)                
-        
+
     games = ["rock paper scissors", "guess the number", "coin flip"]
     
 
