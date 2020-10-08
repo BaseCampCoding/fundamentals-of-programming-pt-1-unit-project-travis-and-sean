@@ -128,7 +128,7 @@ def the_random_game():
             headsORtails = input("\nHeads or Tails? \n")
             headsORtails = headsORtails.lower()
             while headsORtails not in choices:
-                print(Fore.RED + "You must choose Heads or Tails" + Style.RESET_ALL)
+                print(Fore.LIGHTRED_EX + "You must choose Heads or Tails" + Style.RESET_ALL)
                 headsORtails = input("Heads or Tails? \n")
             if headsORtails == "heads" and flip == 1:
                 text = "\nCorrect!"
@@ -138,7 +138,7 @@ def the_random_game():
                 result = "\nIt was Tails!"
                 print(Fore.LIGHTRED_EX + result + Style.RESET_ALL)
                 lives -= 1
-                print(Fore.RED + f"\nYou have {lives} lives left!" + Style.RESET_ALL)
+                print(Fore.LIGHTRED_EX + f"\nYou have {lives} lives left!" + Style.RESET_ALL)
             elif headsORtails == "tails" and flip == 2:
                 text = "\nCorrect!"
                 wins += 1
@@ -162,7 +162,7 @@ def the_random_game():
             print("Goodbye")
             quit()
         while game_choice not in games:
-            print("Please Enter A Valid Game.")
+            print(Fore.LIGHTRED_EX + "Please Enter A Valid Game." + Style.RESET_ALL)
             game_choice = input("Which game do you want to play? \n")
         if game_choice in games:
             if game_choice == "guess the number" or game_choice == 2:
@@ -180,7 +180,7 @@ def the_random_game():
         replay = input("Do you want to play again? [Y/N]\n")
         replay = replay.lower()
         while replay not in responses:
-            print("Please Enter A Valid Option")
+            print(Fore.LIGHTRED_EX + "Please Enter A Valid Option" + Style.RESET_ALL)
             replay = input("Do you want to play again? [Y/N]\n")
         if replay == 'y' or replay == 'yes':
             lives = 0
