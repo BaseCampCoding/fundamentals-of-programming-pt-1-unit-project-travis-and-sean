@@ -102,21 +102,22 @@ def the_random_game():
             result = rock_paper_scissors()
             if result == "winner":
                 text = "\nYou win!"
-                text2 = "+1 life"
+                text2 = "+1 life\n"
                 print(Fore.LIGHTGREEN_EX + text)
-                print(Fore.LIGHTGREEN_EX + text2)
+                print(Fore.LIGHTGREEN_EX + text2 + Style.RESET_ALL)
                 wins += 1
                 lives += 1
+                print(str(player_name) + ", you have " + str(lives) + " lives left!")
                 print()
                 
             elif result == "loser":
                 text = "\nYou lose"
                 lives -= 1
                 print(Fore.RED + text + Style.RESET_ALL)
-                print(f"\nYou have {lives} lives left.")    
+                print(Fore.LIGHTMAGENTA_EX + "\nYou have {lives} lives left." + Style.RESET_ALL)    
 
             elif result == "tie":
-                print("\nThat was a tie")      
+                print(Fore.LIGHTCYAN_EX + "\nThat was a tie" + Style.RESET_ALL)      
 
     def coinFlip():
         global lives
@@ -177,6 +178,7 @@ def the_random_game():
 
     responses = ['y', 'n', 'yes', 'no']
     while lives == 0 or games == []:
+        print(Fore.LIGHTCYAN_EX + "Congratulations!" + Style.RESET_ALL + "You have Completed The Game of Chance\n")
         replay = input("Do you want to play again? [Y/N]\n")
         replay = replay.lower()
         while replay not in responses:
