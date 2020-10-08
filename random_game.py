@@ -162,7 +162,7 @@ def the_random_game():
             print("Goodbye")
             quit()
         while game_choice not in games:
-            print("Please Enter A Valid Game.")
+            print(Fore.LIGHTRED_EX + "Please Enter A Valid Game." + Style.RESET_ALL)
             game_choice = input("Which game do you want to play? \n")
         if game_choice in games:
             if game_choice == "guess the number" or game_choice == 2:
@@ -180,7 +180,7 @@ def the_random_game():
         replay = input("Do you want to play again? [Y/N]\n")
         replay = replay.lower()
         while replay not in responses:
-            print("Please Enter A Valid Option")
+            print(Fore.LIGHTRED_EX + "Please Enter A Valid Option" + Style.RESET_ALL)
             replay = input("Do you want to play again? [Y/N]\n")
         if replay == 'y' or replay == 'yes':
             lives = 0
