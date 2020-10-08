@@ -128,7 +128,7 @@ def the_random_game():
             headsORtails = input("\nHeads or Tails? \n")
             headsORtails = headsORtails.lower()
             while headsORtails not in choices:
-                print(Fore.RED + "You must choose Heads or Tails" + Style.RESET_ALL)
+                print(Fore.LIGHTRED_EX + "You must choose Heads or Tails" + Style.RESET_ALL)
                 headsORtails = input("Heads or Tails? \n")
             if headsORtails == "heads" and flip == 1:
                 text = "\nCorrect!"
@@ -138,7 +138,7 @@ def the_random_game():
                 result = "\nIt was Tails!"
                 print(Fore.LIGHTRED_EX + result + Style.RESET_ALL)
                 lives -= 1
-                print(Fore.RED + f"\nYou have {lives} lives left!" + Style.RESET_ALL)
+                print(Fore.LIGHTMAGENTA_EX + f"\nYou have {lives} lives left!" + Style.RESET_ALL)
             elif headsORtails == "tails" and flip == 2:
                 text = "\nCorrect!"
                 wins += 1
@@ -147,7 +147,7 @@ def the_random_game():
                 result = "\nIt was Heads!"
                 print(Fore.LIGHTRED_EX + result + Style.RESET_ALL)
                 lives -= 1
-                print(Fore.RED + f"\nYou have {lives} lives left!" + Style.RESET_ALL)                
+                print(Fore.LIGHTMAGENTA_EX + f"\nYou have {lives} lives left!" + Style.RESET_ALL)                
         
     games = ["rock paper scissors", "guess the number", "coin flip"]
     
