@@ -121,7 +121,6 @@ def the_random_game():
 
     def coinFlip():
         global lives
-        flip = random.randint(1,2)
         choices = ["heads", "tails"]
         wins = 0
         while lives > 0 and wins < 1:
