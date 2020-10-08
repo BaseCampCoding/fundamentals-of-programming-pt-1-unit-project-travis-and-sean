@@ -121,7 +121,6 @@ def the_random_game():
 
     def coinFlip():
         global lives
-        flip = random.randint(1,2)
         choices = ["heads", "tails"]
         wins = 0
         while lives > 0 and wins < 1:
@@ -224,7 +223,10 @@ def the_random_game():
             quit()
         while game_choice not in games:
             print(Fore.LIGHTRED_EX + "Please Enter A Valid Game." + Style.RESET_ALL)
-            game_choice = input("\nWhich game do you want to play? \n")
+            game_choice = input("Which game do you want to play? \n")
+            if game_choice == "quit" or game_choice == "q":
+                print("Goodbye")
+                quit()
         if game_choice in games:
             if game_choice == "guess the number" or game_choice == 2:
                 random_number()
