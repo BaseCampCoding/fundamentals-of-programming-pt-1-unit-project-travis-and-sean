@@ -247,7 +247,7 @@ def the_random_game():
                     cardChoice = input("What card is in my hand?\n")
                     if cardChoice in cards:
                         break
-    games = ["rock paper scissors", "guess the number", "coin flip", "horse race"]
+    games = ["rock paper scissors", "guess the number", "coin flip", "horse race", "pick a card"]
     
 
     while games != [] and lives > 0:
@@ -266,18 +266,21 @@ def the_random_game():
                 print("Goodbye")
                 quit()
         if game_choice in games:
-            if game_choice == "guess the number" or game_choice == 2:
+            if game_choice == "guess the number":
                 random_number()
                 games.remove("guess the number")
-            elif game_choice == "rock paper scissors" or game_choice == 1:
+            elif game_choice == "rock paper scissors":
                 rpsWins()
                 games.remove("rock paper scissors")
-            elif game_choice == "coin flip" or game_choice == 3:
+            elif game_choice == "coin flip":
                 coinFlip()
                 games.remove("coin flip")
             elif game_choice == "horse race":
                 horseWINS()
                 games.remove("horse race")
+            elif game_choice == "pick a card":
+                cardPickup()
+                games.remove("pick a card")
 
     responses = ['y', 'n', 'yes', 'no']
     while lives == 0 or games == []:
