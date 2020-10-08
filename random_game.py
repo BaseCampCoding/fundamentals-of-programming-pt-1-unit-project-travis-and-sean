@@ -165,6 +165,9 @@ def the_random_game():
         while game_choice not in games:
             print(Fore.LIGHTRED_EX + "Please Enter A Valid Game." + Style.RESET_ALL)
             game_choice = input("Which game do you want to play? \n")
+            if game_choice == "quit" or game_choice == "q":
+                print("Goodbye")
+                quit()
         if game_choice in games:
             if game_choice == "guess the number" or game_choice == 2:
                 random_number()
