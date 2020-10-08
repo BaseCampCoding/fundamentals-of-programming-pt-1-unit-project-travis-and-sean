@@ -223,7 +223,7 @@ def the_random_game():
         drop = random.choice(cards)
         while lives > 0 and wins < 1:
             if cardChoice == drop:
-                print("That was my card!")
+                print("\nThat was my card!")
                 wins +=1
                 break
             elif cardChoice != drop:
@@ -231,15 +231,15 @@ def the_random_game():
                 lives -= 1
                 print(f"You have {lives} lives left.")
                 if drop.endswith("spades"):
-                    print("Your card is a spade.")
+                    print("\nYour card is a spade.")
                 elif drop.endswith("hearts"):
-                    print("Your card is a heart.")
+                    print("\nYour card is a heart.")
                 elif drop.endswith("diamonds"):
-                    print("Your card is a diamond.")
+                    print("\nYour card is a diamond.")
                 elif drop.endswith("clubs"):
-                    print("Your card is a club.")
+                    print("\nYour card is a club.")
                 if lives == 0:
-                    print("You have ran out of lives!")
+                    print(Fore.LIGHTRED_EX + "You have ran out of lives!" + Style.RESET_ALL)
                     break
                 cardChoice = input("What card is in my hand?\n").lower()
                 while cardChoice not in cards:
