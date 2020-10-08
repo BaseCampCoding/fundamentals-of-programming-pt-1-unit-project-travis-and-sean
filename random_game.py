@@ -124,6 +124,7 @@ def the_random_game():
         choices = ["heads", "tails"]
         wins = 0
         while lives > 0 and wins < 1:
+            flip = random.randint(1,2)
             headsORtails = input("\nHeads or Tails? \n")
             headsORtails = headsORtails.lower()
             while headsORtails not in choices:
