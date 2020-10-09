@@ -152,7 +152,7 @@ def the_random_game():
     def horse_game():
         global lives
         num = random.randint(1, 4)
-        player_horse = input(Fore.LIGHTCYAN_EX + "Pick a Horse number\nLucky[1], Speedy[2], Lightning[3], Slow Poke[4]: " + Style.RESET_ALL)
+        player_horse = input(Fore.WHITE + "Pick a Horse number\n"+ Style.RESET_ALL + Fore.GREEN + "Lucky[1] " + Style.RESET_ALL + Fore.YELLOW + "Speedy[2] " + Style.RESET_ALL + Fore.LIGHTBLUE_EX + "Lightning[3] " + Style.RESET_ALL + Fore.RED + "Slow Poke[4]:\n" + Style.RESET_ALL)
         response = ["1", "2", "3", "4"]
         while player_horse not in response:
             print(Fore.LIGHTRED_EX + "Please pick a horse number!" + Style.RESET_ALL)
