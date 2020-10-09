@@ -155,13 +155,8 @@ def the_random_game():
         player_horse = input(Fore.LIGHTCYAN_EX + "Pick a Horse number\nLucky[1], Speedy[2], Lightning[3], Slow Poke[4]: " + Style.RESET_ALL)
         response = ["1", "2", "3", "4"]
         while player_horse not in response:
-<<<<<<< HEAD
             print(Fore.LIGHTRED_EX + "Please pick a horse number!" + Style.RESET_ALL)
             player_horse = input("Lucky[1], Speedy[2], Lightning[3], Slow Poke[4]: ")
-=======
-            print("Please pick a horse number!")
-            player_horse = input(Fore.LIGHTCYAN_EX + "Lucky[1], Speedy[2], Lightning[3], Slow Poke[4]: " + Style.RESET_ALL)
->>>>>>> 649f336bda88ba215afe0b805b4610170d2ec638
         ## Lucky
         if num == 1 and player_horse == "1":
             result = ("won")
