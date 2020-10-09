@@ -62,6 +62,7 @@ def the_random_game():
         global lives
         com = random.randint(1, 3)
         shoot = input("\nRock, Paper, Scissors... SHOOT!: ")
+        shoot = shoot.lower()
         responses = ["rock", "paper", "scissors"]
         while shoot not in responses:
             print(Fore.LIGHTRED_EX + "Please enter valid option." + Style.RESET_ALL)
@@ -239,7 +240,7 @@ def the_random_game():
                     print("\nYour card is a diamond.")
                 elif drop.endswith("clubs"):
                     print("\nYour card is a club.")
-                if lives == 0:
+                if lives == 0 and wins < 1:
                     print("Your card was the " + drop)
                     print(Fore.LIGHTRED_EX + "You have ran out of lives!" + Style.RESET_ALL)
                     break
