@@ -152,11 +152,11 @@ def the_random_game():
     def horse_game():
         global lives
         num = random.randint(1, 4)
-        player_horse = input("Pick a Horse number\nLucky[1], Speedy[2], Lightning[3], Slow Poke[4]: ")
+        player_horse = input(Fore.LIGHTCYAN_EX + "Pick a Horse number\nLucky[1], Speedy[2], Lightning[3], Slow Poke[4]: " + Style.RESET_ALL)
         response = ["1", "2", "3", "4"]
         while player_horse not in response:
             print("Please pick a horse number!")
-            player_horse = input("Lucky[1], Speedy[2], Lightning[3], Slow Poke[4]: ")
+            player_horse = input(Fore.LIGHTCYAN_EX + "Lucky[1], Speedy[2], Lightning[3], Slow Poke[4]: " + Style.RESET_ALL)
         ## Lucky
         if num == 1 and player_horse == "1":
             result = ("won")
@@ -200,7 +200,7 @@ def the_random_game():
             lost = ["1lost", "2lost", "3lost", "4lost"]
             while result == "won":
                 wins += 1
-                print(Fore.LIGHTCYAN_EX+ "Your horse won" + Style.RESET_ALL)
+                print(Fore.LIGHTGREEN_EX+ "Your horse won" + Style.RESET_ALL)
                 print()
                 break
             while result in lost:
@@ -215,7 +215,7 @@ def the_random_game():
         cardChoice = input("What card is in my hand?\n").lower()
         cards = ["ace of spades", "ace of hearts", "ace of diamonds", "ace of clubs",  "2 of spades", "2 of hearts", "2 of diamonds", "2 of clubs", "3 of spades", "3 of hearts", "3 of diamonds", "3 of clubs", "4 of spades", "4 of hearts", "4 of diamonds", "4 of clubs", "5 of spades", "5 of hearts", "5 of diamonds", "5 of clubs", "6 of spades", "6 of hearts", "6 of diamonds", "6 of clubs", "7 of spades", "7 of hearts", "7 of diamonds", "7 of clubs", "8 of spades", "8 of hearts", "8 of diamonds", "8 of clubs", "9 of spades", "9 of hearts", "9 of diamonds", "9 of clubs", "10 of spades", "10 of hearts", "10 of diamonds", "10 of clubs", "jack of spades", "jack of hearts", "jack of diamonds", "jack of clubs", "queen of spades", "queen of hearts", "queen of diamonds", "queen of clubs", "king of spades", "king of hearts", "king of diamonds", "king of clubs"]
         while cardChoice not in cards:
-            print("Thats not a card...")
+            print(Fore.LIGHTMAGNETA_EX + "Thats not a card..." + Style.RESET_ALL)
             cardChoice = input("What card is in my hand?\n")
             if cardChoice in cards:
                 break
@@ -223,11 +223,11 @@ def the_random_game():
         drop = random.choice(cards)
         while lives > 0 and wins < 1:
             if cardChoice == drop:
-                print("\nThat was my card!")
+                print( Fore.LIGHTGREEN_EX + "\nThat was my card!" Style.RESET_ALL)
                 wins +=1
                 break
             elif cardChoice != drop:
-                print("That is not my card.")
+                print(Fore.LIGHTRED_EX + "That is not my card." + Style.RESET_ALL)
                 lives -= 1
                 print(f"You have {lives} lives left.")
                 if drop.endswith("spades"):
