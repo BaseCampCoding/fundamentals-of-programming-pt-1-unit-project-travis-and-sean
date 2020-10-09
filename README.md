@@ -1,11 +1,11 @@
 ## The Game of Chance
 ### Description
 The Game of Chance is a program with 5 mini games of chance inside. These games include rock paper scissors, guess the number,
-coin flip, horse races, and pick the card. You have a limit of 5 lives to make it through all 5 games. There is a game that secretly gives you an extra life once you win.
+coin flip, horse race, and pick the card. You have a limit of 5 lives to make it through all 5 games. There is a game that secretly gives you an extra life once you win.
 
 ### Running
 Once the file begins running, it will ask the user for their name. Next it shows what games are available and the fun begins  The user starts playing the games
-amd the game tracks how many lives are left. Once the user beats the game, it is no longer available until the next set of lives.
+and the game tracks how many lives are left. Once the user beats the game, it is no longer be available until the next set of lives. Which means you'll have to either lose, quit, or win the game. If you win The Game of Chance, you will congratulate for your success.
 ```
 Welcome to The Game of Chance!
 What is your name?
