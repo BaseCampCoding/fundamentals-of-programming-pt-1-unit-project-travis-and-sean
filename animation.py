@@ -16,7 +16,7 @@ def player_animate():
         player.shape("square")
     elif player.shape() == "square":
        player.shape("circle")
-    wn.ontimer(player_animate, 500)
+    wn.ontimer(player_animate, 1000)
     
     
 
